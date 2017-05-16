@@ -7,6 +7,8 @@
 //
 // 常用的宏
 
+#import "Masonry.h"
+
 #ifndef Macro_h
 #define Macro_h
 
@@ -31,6 +33,11 @@
 #define KReader_URL @"https://gravity.hizuoye.com/"
 
 #define KReader_URL_IPV6 @"https://gravity.kuandov6.com/"
+
+/**
+ 一种背景灰
+ */
+#define GrayColor [UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1.0f]
 
 
 

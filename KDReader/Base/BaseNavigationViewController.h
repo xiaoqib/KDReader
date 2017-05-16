@@ -1,5 +1,5 @@
 //
-//  BaseViewController.h
+//  BaseNavigationViewController.h
 //  KDReader
 //
 //  Created by 陳升琪 on 2017/5/16.
@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Macro.h"
 
-
-@interface BaseViewController : UIViewController
+@interface BaseNavigationViewController : UINavigationController
 
 @end

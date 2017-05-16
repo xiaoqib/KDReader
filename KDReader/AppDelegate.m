@@ -7,8 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import "CategoryViewController.h"
+#import "BookcaseViewController.h"
+#import "SearchViewController.h"
+#import "SelectionViewController.h"
+#import "BaseViewController.h"
+#import "BaseNavigationViewController.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic,strong) CategoryViewController * categoryVC; //分类
+@property (nonatomic,strong) BookcaseViewController * bookcaseVC; //书架
+@property (nonatomic,strong) SearchViewController * searchVC;  //搜书
+@property (nonatomic,strong) SelectionViewController *selectionVC; //精选
+
+
 
 @end
 
@@ -21,7 +34,50 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    UITabBarController *tb = 
+    UITabBarController *tb = [[UITabBarController alloc]init];
+    
+    self.window.rootViewController = tb;
+    
+    self.categoryVC = [[CategoryViewController alloc]init];
+    self.categoryVC.tabBarItem.title = @"分类";
+    
+//    self.categoryVC.tabBarItem.image = [UIImage imageNamed:@""];
+    
+    self.bookcaseVC = [[BookcaseViewController alloc]init];
+//    self.bookcaseVC.tabBarItem.title = @"书架";
+//    self.bookcaseVC.tabBarItem.image = [UIImage imageNamed:@""];
+    
+    self.searchVC = [[SearchViewController alloc]init];
+//    self.searchVC.tabBarItem.title = @"搜书";
+//    self.searchVC.tabBarItem.image = [UIImage imageNamed:@""];
+    
+    self.selectionVC = [[SelectionViewController alloc]init];
+//    self.selectionVC.tabBarItem.title = @"精选";
+//    self.selectionVC.tabBarItem.image = [UIImage imageNamed:@""];
+    
+//    self.categoryVC.view.backgroundColor = [UIColor redColor];
+//    self.bookcaseVC.view.backgroundColor = [UIColor orangeColor];
+//    self.searchVC.view.backgroundColor = [UIColor blueColor];
+//    self.selectionVC.view.backgroundColor = [UIColor yellowColor];
+
+    BaseNavigationViewController * nav1 = [[BaseNavigationViewController alloc]initWithRootViewController:self.bookcaseVC];
+    
+    BaseNavigationViewController * nav2 = [[BaseNavigationViewController alloc]initWithRootViewController:self.selectionVC];
+    
+    BaseNavigationViewController * nav3 = [[BaseNavigationViewController alloc]initWithRootViewController:self.searchVC];
+    
+    BaseNavigationViewController * nav4 = [[BaseNavigationViewController alloc]initWithRootViewController:self.categoryVC];
+    
+    nav1.tabBarItem.title = @"书架";
+    nav2.tabBarItem.title = @"精选";
+    nav3.tabBarItem.title = @"搜书";
+    nav4.tabBarItem.title = @"分类";
+
+
+
+    tb.viewControllers = @[nav1,nav2,nav3,nav4];
+    
+//    [self.window makeKeyAndVisible];
     
     return YES;
 }

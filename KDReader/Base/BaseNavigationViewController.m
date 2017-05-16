@@ -1,24 +1,22 @@
 //
-//  BookcaseViewController.m
+//  BaseNavigationViewController.m
 //  KDReader
 //
 //  Created by 陳升琪 on 2017/5/16.
 //  Copyright © 2017年 陳升琪. All rights reserved.
 //
 
-#import "BookcaseViewController.h"
+#import "BaseNavigationViewController.h"
 
-@interface BookcaseViewController ()
+@interface BaseNavigationViewController ()
 
 @end
 
-@implementation BookcaseViewController
+@implementation BaseNavigationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"书架";
-    self.view.backgroundColor = [UIColor redColor];
 }
 
 - (void)didReceiveMemoryWarning {

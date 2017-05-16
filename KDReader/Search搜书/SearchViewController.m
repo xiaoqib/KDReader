@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"搜书";
+    self.view.backgroundColor = [UIColor brownColor];
+
 }
 
 - (void)didReceiveMemoryWarning {
