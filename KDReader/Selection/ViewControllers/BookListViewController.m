@@ -7,8 +7,9 @@
 //
 
 #import "BookListViewController.h"
+#import "BookListTableViewCell.h"
 
-@interface BookListViewController ()
+@interface BookListViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) UITableView *tableView;
 
@@ -34,8 +35,29 @@
         make.top.equalTo(self.view.mas_top);
         make.bottom.equalTo(self.view.mas_bottom);
     }];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.rowHeight = 166;
+    _tableView.separatorStyle = NO;  //取消分割线
     
-    
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 5;
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    BookListTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"BookListTableViewCell"];
+    if (!cell) {
+        cell = [[BookListTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"BookListTableViewCell"];
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
+    return  cell;
     
 }
 
