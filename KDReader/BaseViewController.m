@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "MBProgressHUD.h"
 
 @interface BaseViewController ()
 
@@ -22,6 +23,22 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void)showMBProgressHUDWithText:(NSString *)text{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.label.text = text;
+    [hud hideAnimated:YES afterDelay:0.8];
+    /*
+    [self doSomethingInBackgroundWithProgressCallback:^(float progress) {
+        hud.progress = progress;
+    } completionCallback:^{
+        [hud hide:YES];
+    }];
+     */
+    
 }
 
 /*

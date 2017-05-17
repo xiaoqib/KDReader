@@ -8,11 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CardTableViewCell : UITableViewCell <UICollectionViewDataSource,UICollectionViewDelegate>
+@protocol SelectItemDelegate <NSObject>
+
+- (void)didSelectItemNumOfCollectionViewWith:(int)num;
+
+@end
+
+@interface CardTableViewCell : UITableViewCell
+
+
 
 @property (nonatomic,strong) NSArray *imageArray;
 @property (nonatomic,strong) UILabel *titleLabel;
 
 @property (nonatomic,strong) UICollectionView *collectionView;
+
+@property (nonatomic,strong) UIButton *bottomButton;
+
+@property (nonatomic,assign) int collectionViewNum;
+
+@property(nonatomic, weak)id<SelectItemDelegate>delegate;
 
 @end

@@ -9,7 +9,9 @@
 #import "SelectionViewController.h"
 #import "SDCycleScrollView.h"
 #import "CardTableViewCell.h"
-@interface SelectionViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "BookDetailedViewController.h"
+#import "BookListViewController.h"
+@interface SelectionViewController ()<UITableViewDelegate,UITableViewDataSource,SelectItemDelegate>
 
 @property (nonatomic,strong) UITableView *tableView;
 
@@ -56,7 +58,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return  2;
+    return  3;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -71,14 +73,49 @@
     if (!cell) {
         cell = [[CardTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CardTableViewCell"];
     }
+    cell.delegate = self;
     cell.titleLabel.text = @"排行榜";
+    cell.bottomButton.tag = indexPath.row;
+    [cell.bottomButton addTarget:self action:@selector(pushBookList:) forControlEvents:UIControlEventTouchUpInside];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return  cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
 
+-(void)didSelectItemNumOfCollectionViewWith:(int)num {
+    [self showMBProgressHUDWithText:[NSString stringWithFormat:@"%d",num]];
+    
+    //跳转到图书详情页
+    BookDetailedViewController *bookdetailed = [[BookDetailedViewController alloc]init];
+    
+    [self.navigationController pushViewController:bookdetailed animated:YES];
+    
+}
 
+-(void)pushBookList:(UIButton *)button {
+    
+   // [self showMBProgressHUDWithText:[NSString stringWithFormat:@"%ld",(long)button.tag]];
+    
+    if (button.tag == 0) {
+        BookListViewController *booklistVC = [[BookListViewController alloc]init];
+        booklistVC.vcTitle = @"排行榜";
+        [self.navigationController pushViewController:booklistVC animated:YES];
+        
+    }else if (button.tag == 1) {
+        BookListViewController *booklistVC = [[BookListViewController alloc]init];
+        booklistVC.vcTitle = @"男生榜";
+        [self.navigationController pushViewController:booklistVC animated:YES];
+    }else {
+        BookListViewController *booklistVC = [[BookListViewController alloc]init];
+        booklistVC.vcTitle = @"女生榜";
+        [self.navigationController pushViewController:booklistVC animated:YES];
+    }
+
+}
 
 
 - (void)didReceiveMemoryWarning {

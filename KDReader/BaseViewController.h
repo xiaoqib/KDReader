@@ -12,4 +12,9 @@
 
 @interface BaseViewController : UIViewController
 
+
+//显示提示
+-(void)showMBProgressHUDWithText:(NSString *)text;
+
+
 @end

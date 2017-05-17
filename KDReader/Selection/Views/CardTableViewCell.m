@@ -9,14 +9,22 @@
 #import "CardTableViewCell.h"
 #import "Masonry.h"
 #import "Macro.h"
+#import "CardCollectionViewCell.h"
+#import "BookDetailedViewController.h"
+
+@interface CardTableViewCell ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+
+
+@end
 
 @implementation CardTableViewCell 
+
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        
+  
         [self addViews];
     }
     return self;
@@ -98,10 +106,10 @@
     }];
     
     
-    UIButton *bottomButton = [[UIButton alloc]init];
-    bottomButton.backgroundColor = [UIColor whiteColor];
-    [self addSubview:bottomButton];
-    [bottomButton mas_makeConstraints:^(MASConstraintMaker *make) {
+     _bottomButton = [[UIButton alloc]init];
+    _bottomButton.backgroundColor = [UIColor whiteColor];
+    [self addSubview:_bottomButton];
+    [_bottomButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.mas_left);
         make.right.equalTo(self.mas_right);
         make.top.equalTo(lineViewBottom.mas_bottom);
@@ -112,29 +120,73 @@
     buttonLabel.font = [UIFont systemFontOfSize:11];
     buttonLabel.textColor = [UIColor grayColor];
     buttonLabel.text = @"更多";
-    [bottomButton addSubview:buttonLabel];
+    [_bottomButton addSubview:buttonLabel];
     [buttonLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(bottomButton.mas_centerY);
-        make.centerX.equalTo(bottomButton.mas_centerX);
+        make.centerY.equalTo(_bottomButton.mas_centerY);
+        make.centerX.equalTo(_bottomButton.mas_centerX);
     }];
     
-    self.collectionView = [[UICollectionView alloc]init];
+    //初始化layout
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+
+    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     
+     [self.collectionView registerClass:[CardCollectionViewCell class] forCellWithReuseIdentifier:@"CardCollectionViewCell"];
     
+    [self addSubview:self.collectionView];
+    
+     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(lineViewLeft.mas_bottom).offset(30);
+        make.left.equalTo(self.mas_left);
+        make.right.equalTo(self.mas_right);
+        make.bottom.equalTo(lineViewBottom.mas_top).offset(-22);
+    }]; 
+     
+    self.collectionView.scrollEnabled = NO;
+
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     
 }
+
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    CardCollectionViewCell *cell1 = [collectionView dequeueReusableCellWithReuseIdentifier:@"CardCollectionViewCell" forIndexPath:indexPath];
+    
+    return  cell1;
+}
+
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return 6;
 }
 
+
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(169/2, 300/2);
+}
 
+//设置每个item的UIEdgeInsets
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(20, 20, 20, 20);
+}
 
+-(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return  0;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self.delegate didSelectItemNumOfCollectionViewWith:(int)indexPath.row];
+    
+}
 
 
 

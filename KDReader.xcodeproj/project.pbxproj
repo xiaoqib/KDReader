@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B72537C51ECC1D45002A3824 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B72537C41ECC1D45002A3824 /* MBProgressHUD.m */; };
+		B72537CB1ECC2540002A3824 /* BookDetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B72537CA1ECC2540002A3824 /* BookDetailedViewController.m */; };
+		B72537CE1ECC57B1002A3824 /* BookListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B72537CD1ECC57B1002A3824 /* BookListViewController.m */; };
+		B72537D11ECC5CC9002A3824 /* BookListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B72537D01ECC5CC9002A3824 /* BookListTableViewCell.m */; };
 		B7476D701ECAF159004D5F40 /* CardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7476D6F1ECAF159004D5F40 /* CardTableViewCell.m */; };
 		B7476DBF1ECBDC44004D5F40 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7476DB21ECBDC44004D5F40 /* TAAbstractDotView.m */; };
 		B7476DC01ECBDC44004D5F40 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7476DB41ECBDC44004D5F40 /* TAAnimatedDotView.m */; };
@@ -15,7 +19,6 @@
 		B7476DC31ECBDC44004D5F40 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7476DBA1ECBDC44004D5F40 /* SDCollectionViewCell.m */; };
 		B7476DC41ECBDC44004D5F40 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7476DBC1ECBDC44004D5F40 /* SDCycleScrollView.m */; };
 		B7476DC51ECBDC44004D5F40 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B7476DBE1ECBDC44004D5F40 /* UIView+SDExtension.m */; };
-		B7476DF11ECBDCE8004D5F40 /* FLAnimatedImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B7476DC91ECBDCE8004D5F40 /* FLAnimatedImageView+WebCache.m */; };
 		B7476DF21ECBDCE8004D5F40 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B7476DCB1ECBDCE8004D5F40 /* MKAnnotationView+WebCache.m */; };
 		B7476DF31ECBDCE8004D5F40 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = B7476DCD1ECBDCE8004D5F40 /* NSData+ImageContentType.m */; };
 		B7476DF41ECBDCE8004D5F40 /* NSImage+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B7476DCF1ECBDCE8004D5F40 /* NSImage+WebCache.m */; };
@@ -52,6 +55,7 @@
 		B7476E3C1ECBDD43004D5F40 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B7476E2E1ECBDD43004D5F40 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		B7476E3D1ECBDD43004D5F40 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B7476E301ECBDD43004D5F40 /* View+MASAdditions.m */; };
 		B7476E3E1ECBDD43004D5F40 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B7476E331ECBDD43004D5F40 /* ViewController+MASAdditions.m */; };
+		B7476E411ECBE37F004D5F40 /* CardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7476E401ECBE37F004D5F40 /* CardCollectionViewCell.m */; };
 		B77573CD1ECAA634001008E9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B77573CC1ECAA634001008E9 /* BaseViewController.m */; };
 		B77573D01ECAA66C001008E9 /* BookcaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B77573CF1ECAA66C001008E9 /* BookcaseViewController.m */; };
 		B77573D31ECAA6A0001008E9 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B77573D21ECAA6A0001008E9 /* CategoryViewController.m */; };
@@ -86,6 +90,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B72537C31ECC1D45002A3824 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		B72537C41ECC1D45002A3824 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		B72537C91ECC2540002A3824 /* BookDetailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailedViewController.h; sourceTree = "<group>"; };
+		B72537CA1ECC2540002A3824 /* BookDetailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailedViewController.m; sourceTree = "<group>"; };
+		B72537CC1ECC57B1002A3824 /* BookListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookListViewController.h; sourceTree = "<group>"; };
+		B72537CD1ECC57B1002A3824 /* BookListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookListViewController.m; sourceTree = "<group>"; };
+		B72537CF1ECC5CC9002A3824 /* BookListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookListTableViewCell.h; sourceTree = "<group>"; };
+		B72537D01ECC5CC9002A3824 /* BookListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookListTableViewCell.m; sourceTree = "<group>"; };
 		B7476D6E1ECAF159004D5F40 /* CardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardTableViewCell.h; sourceTree = "<group>"; };
 		B7476D6F1ECAF159004D5F40 /* CardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardTableViewCell.m; sourceTree = "<group>"; };
 		B7476DB11ECBDC44004D5F40 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
@@ -102,8 +114,6 @@
 		B7476DBC1ECBDC44004D5F40 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
 		B7476DBD1ECBDC44004D5F40 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		B7476DBE1ECBDC44004D5F40 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
-		B7476DC81ECBDCE8004D5F40 /* FLAnimatedImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FLAnimatedImageView+WebCache.h"; sourceTree = "<group>"; };
-		B7476DC91ECBDCE8004D5F40 /* FLAnimatedImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FLAnimatedImageView+WebCache.m"; sourceTree = "<group>"; };
 		B7476DCA1ECBDCE8004D5F40 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		B7476DCB1ECBDCE8004D5F40 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		B7476DCC1ECBDCE8004D5F40 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -182,6 +192,8 @@
 		B7476E311ECBDD43004D5F40 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		B7476E321ECBDD43004D5F40 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		B7476E331ECBDD43004D5F40 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		B7476E3F1ECBE37F004D5F40 /* CardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCollectionViewCell.h; sourceTree = "<group>"; };
+		B7476E401ECBE37F004D5F40 /* CardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewCell.m; sourceTree = "<group>"; };
 		B77573CB1ECAA634001008E9 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = KDReader/BaseViewController.h; sourceTree = SOURCE_ROOT; };
 		B77573CC1ECAA634001008E9 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = KDReader/BaseViewController.m; sourceTree = SOURCE_ROOT; };
 		B77573CE1ECAA66C001008E9 /* BookcaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookcaseViewController.h; path = ../BookcaseViewController.h; sourceTree = "<group>"; };
@@ -238,9 +250,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B72537C21ECC1D35002A3824 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				B72537C31ECC1D45002A3824 /* MBProgressHUD.h */,
+				B72537C41ECC1D45002A3824 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		B7476D711ECBDB9C004D5F40 /* Third-Party */ = {
 			isa = PBXGroup;
 			children = (
+				B72537C21ECC1D35002A3824 /* MBProgressHUD */,
 				B7476E191ECBDD43004D5F40 /* Masonry */,
 				B7476E051ECBDD2C004D5F40 /* AFNetworking */,
 				B7476DC61ECBDCE8004D5F40 /* SDWebImage */,
@@ -281,7 +303,6 @@
 		B7476DC61ECBDCE8004D5F40 /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
-				B7476DC71ECBDCE8004D5F40 /* FLAnimatedImage */,
 				B7476DCA1ECBDCE8004D5F40 /* MKAnnotationView+WebCache.h */,
 				B7476DCB1ECBDCE8004D5F40 /* MKAnnotationView+WebCache.m */,
 				B7476DCC1ECBDCE8004D5F40 /* NSData+ImageContentType.h */,
@@ -324,15 +345,6 @@
 			);
 			name = SDWebImage;
 			path = SDCycleScrollView/SDWebImage;
-			sourceTree = "<group>";
-		};
-		B7476DC71ECBDCE8004D5F40 /* FLAnimatedImage */ = {
-			isa = PBXGroup;
-			children = (
-				B7476DC81ECBDCE8004D5F40 /* FLAnimatedImageView+WebCache.h */,
-				B7476DC91ECBDCE8004D5F40 /* FLAnimatedImageView+WebCache.m */,
-			);
-			path = FLAnimatedImage;
 			sourceTree = "<group>";
 		};
 		B7476E051ECBDD2C004D5F40 /* AFNetworking */ = {
@@ -450,6 +462,8 @@
 			children = (
 				B77573CE1ECAA66C001008E9 /* BookcaseViewController.h */,
 				B77573CF1ECAA66C001008E9 /* BookcaseViewController.m */,
+				B72537C91ECC2540002A3824 /* BookDetailedViewController.h */,
+				B72537CA1ECC2540002A3824 /* BookDetailedViewController.m */,
 			);
 			name = ViewControllers;
 			path = Viewcontrollers;
@@ -515,6 +529,10 @@
 			children = (
 				B7476D6E1ECAF159004D5F40 /* CardTableViewCell.h */,
 				B7476D6F1ECAF159004D5F40 /* CardTableViewCell.m */,
+				B7476E3F1ECBE37F004D5F40 /* CardCollectionViewCell.h */,
+				B7476E401ECBE37F004D5F40 /* CardCollectionViewCell.m */,
+				B72537CF1ECC5CC9002A3824 /* BookListTableViewCell.h */,
+				B72537D01ECC5CC9002A3824 /* BookListTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -524,6 +542,8 @@
 			children = (
 				B77573D71ECAA8B7001008E9 /* SelectionViewController.h */,
 				B77573D81ECAA8B7001008E9 /* SelectionViewController.m */,
+				B72537CC1ECC57B1002A3824 /* BookListViewController.h */,
+				B72537CD1ECC57B1002A3824 /* BookListViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -760,11 +780,14 @@
 				B7D610131EC9C0870065B920 /* ViewController.m in Sources */,
 				B7476E001ECBDCE8004D5F40 /* UIImage+WebP.m in Sources */,
 				B7476E161ECBDD2C004D5F40 /* AFURLRequestSerialization.m in Sources */,
+				B7476E411ECBE37F004D5F40 /* CardCollectionViewCell.m in Sources */,
 				B7476E181ECBDD2C004D5F40 /* AFURLSessionManager.m in Sources */,
 				B7D610101EC9C0870065B920 /* AppDelegate.m in Sources */,
+				B72537C51ECC1D45002A3824 /* MBProgressHUD.m in Sources */,
 				B7476DC11ECBDC44004D5F40 /* TADotView.m in Sources */,
 				B7476DFF1ECBDCE8004D5F40 /* UIImage+MultiFormat.m in Sources */,
 				B7476E011ECBDCE8004D5F40 /* UIImageView+HighlightedWebCache.m in Sources */,
+				B72537D11ECC5CC9002A3824 /* BookListTableViewCell.m in Sources */,
 				B7D6100D1EC9C0870065B920 /* main.m in Sources */,
 				B7476DC21ECBDC44004D5F40 /* TAPageControl.m in Sources */,
 				B7476E371ECBDD43004D5F40 /* MASConstraintMaker.m in Sources */,
@@ -773,6 +796,7 @@
 				B7476DFE1ECBDCE8004D5F40 /* UIImage+GIF.m in Sources */,
 				B7476DF71ECBDCE8004D5F40 /* SDWebImageCompat.m in Sources */,
 				B7476DC41ECBDC44004D5F40 /* SDCycleScrollView.m in Sources */,
+				B72537CE1ECC57B1002A3824 /* BookListViewController.m in Sources */,
 				B7476DF21ECBDCE8004D5F40 /* MKAnnotationView+WebCache.m in Sources */,
 				B7476E151ECBDD2C004D5F40 /* AFSecurityPolicy.m in Sources */,
 				B77573D31ECAA6A0001008E9 /* CategoryViewController.m in Sources */,
@@ -782,7 +806,6 @@
 				B7476E3B1ECBDD43004D5F40 /* NSArray+MASAdditions.m in Sources */,
 				B7476E391ECBDD43004D5F40 /* MASViewAttribute.m in Sources */,
 				B7476DF31ECBDCE8004D5F40 /* NSData+ImageContentType.m in Sources */,
-				B7476DF11ECBDCE8004D5F40 /* FLAnimatedImageView+WebCache.m in Sources */,
 				B7476DF61ECBDCE8004D5F40 /* SDImageCacheConfig.m in Sources */,
 				B77573D91ECAA8B7001008E9 /* SelectionViewController.m in Sources */,
 				B7476D701ECAF159004D5F40 /* CardTableViewCell.m in Sources */,
@@ -801,6 +824,7 @@
 				B77573EB1ECAD7F8001008E9 /* BaseNavigationViewController.m in Sources */,
 				B7476E361ECBDD43004D5F40 /* MASConstraint.m in Sources */,
 				B7476DFD1ECBDCE8004D5F40 /* UIButton+WebCache.m in Sources */,
+				B72537CB1ECC2540002A3824 /* BookDetailedViewController.m in Sources */,
 				B7476DF91ECBDCE8004D5F40 /* SDWebImageDownloader.m in Sources */,
 				B77573D61ECAA6B2001008E9 /* SearchViewController.m in Sources */,
 			);
