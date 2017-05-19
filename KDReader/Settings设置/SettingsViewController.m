@@ -1,26 +1,30 @@
 //
-//  BaseNavigationViewController.m
+//  SettingsViewController.m
 //  KDReader
 //
-//  Created by 陳升琪 on 2017/5/16.
+//  Created by 陳升琪 on 2017/5/18.
 //  Copyright © 2017年 陳升琪. All rights reserved.
 //
 
-#import "BaseNavigationViewController.h"
+#import "SettingsViewController.h"
 
-@interface BaseNavigationViewController ()
+@interface SettingsViewController ()
 
 @end
 
-@implementation BaseNavigationViewController
+@implementation SettingsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.title = @"设置";
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.hiderigtButton;
+    
     
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -10,6 +10,9 @@
 
 @interface CategoryViewController ()
 
+@property (nonatomic,strong) UITableView *tableView;
+
+
 @end
 
 @implementation CategoryViewController
@@ -20,7 +23,7 @@
     
     self.title = @"分类";
     self.view.backgroundColor = [UIColor yellowColor];
-
+    
 }
 
 - (void)didReceiveMemoryWarning {

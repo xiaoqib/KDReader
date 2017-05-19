@@ -58,7 +58,7 @@
     self.aboutBookLabel = [[UILabel alloc]init];
     self.aboutBookLabel.textColor = [UIColor grayColor];
     self.aboutBookLabel.font = [UIFont systemFontOfSize:13];
-    [self.aboutBookLabel sizeToFit];
+ //   [self.aboutBookLabel sizeToFit];
     [self addSubview:self.aboutBookLabel];
     [self.aboutBookLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.authorLabel.mas_left);
@@ -68,7 +68,7 @@
     }];
     
     self.aboutBookLabel.text  = @"何天拿到了一枚中『国』龙徽章！这是龙魂的标志。为了这个，何天努力了足足十七年从两岁开始，一直到现在。从一个小兵，到现在的兵王。更是进入龙";
-    
+    self.aboutBookLabel.numberOfLines = 0;
 }
 
 @end

@@ -12,9 +12,15 @@
 
 @interface BaseViewController : UIViewController
 
+@property (nonatomic,strong) UIButton *leftButton;
+@property (nonatomic,strong) UIButton *rightButton;
+
 
 //显示提示
 -(void)showMBProgressHUDWithText:(NSString *)text;
+
+//隐藏右边按钮
+-(void)hiderigtButton;
 
 
 @end
